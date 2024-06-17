@@ -13,26 +13,60 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header class="flex-center border">
+        <header class="center border">
             <h1 id="website-title" class="border">Hadi's Algorithm Visualizer</h1>
         </header>
 
         <div id="content-body" class="grid outer-container">
-            <div id="algorithm-display" class="flex-center border">
+            <div id="algorithm-display" class="center border">
                 <h2 id="algorithm-selection-text" class="div-title">Select An Algorithm</h2>
-                <div id="algorithm-visualizer-frame" class="border">
-                    
+                <div id="algorithm-visualizer-wrapper" class="border flex">
+                    <div id="algorithm-output-div" class="border div-padding">
+                        
+                    </div>
                 </div>
             </div>
-            <div id="input-selectors" class="flex-center border">
+            <div id="input-selectors" class="center border">
                 <h2 class="div-title">Algorithms</h2>
-                <div id="selection-div" class="border">
-                    
+                <div id="selection-wrapper" class="border flex">
+                    <div id="selections" class="border div-padding">
+                        <section id="sorting-algorithm-section" class="border">
+                            <p id="sorting-algorithms-title" class="algorithm-titles">Sorting Algorithms</p>
+                            <ul id="sorting-algorithm-list" class="lists">
+                                <li id="quicksort-list-item">Quicksort</li>
+                                <li id="mergesort-list-item">Mergesort</li>
+                            </ul>
+                        </section>
+                        <section id="generic-graph-algorithm-section" class="border">
+                            <p id="generic-graph-algorithms-title" class="algorithm-titles">Generic Graph Algorithms</p>
+                            <ul id="generic-graph-algorithm-section" class="lists">
+                                <li id="bfs-list-item">Breadth First Search</li>
+                                <li id="dfs-list-item">Depth First Search</li>
+                            </ul>
+                        </section>
+                        <section id="undirected-graph-algorithm-section" class="border">
+                            <p id="undirected-graph-algorithms-title" class="algorithm-titles">Undirected Graph Algorithms</p>
+                            <ul id="undirected-graph-algorithm-section" class="lists">
+                                <li id="prims-list-item">Prim's</li>
+                                <li id="kruskals-list-item">Kruskal's</li>
+                            </ul>
+                        </section>
+                        <section id="directed-graph-algorithm-section" class="border">
+                            <p id="directed-graph-algorithms-title" class="algorithm-titles">Directed Graph Algorithms</p>
+                            <ul id="directed-graph-algorithm-section" class="lists">
+                                <li id="dijkstras-list-item">Dijkstra's</li>
+                                <li id="ford-list-item">Bellman-Ford</li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
+                <button id="submit-button">Click To Run Algorithm</button>
             </div>
         </div>
 
         
-        <script src="main.js" async defer></script>
+        <script type="module" src="main.js"></script>
+        <script type="module" src="./Visualizers/SortingAlgorithmVisualizer.js"></script>
+        <script type="module" src="./Algorithms/SortingAlgorithms.js"></script>
     </body>
 </html>
